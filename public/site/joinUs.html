@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>انضم إلينا</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <header
+        class="d-flex align-items-center justify-content-between bg-white p-3"
+      >
+        <a href="home.html" style="color: black">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <h5>انضم إلينا</h5>
+        <i class="fa-regular fa-bell"></i>
+      </header>
+      <main>
+        <div
+          class="join_us d-flex flex-column align-items-center px-1 m-3 justify-content-center bg-white"
+        >
+          <img src="./image/3azmak.png" alt="logo" />
+          <p class="px-3">
+            إنضم إلى قائمة عملائنا المميزين، يرجى تعبئة الحقول وسيتواصل معك
+            فريقنا في أقرب وقت
+          </p>
+          <form>
+            <div class="m-2 px-1 container_form">
+              <div class="name">
+                <label for="name">الاسم :</label>
+                <div class="container_input">
+                  <i class="fa fa-user"></i>
+                  <input type="text" id="name" placeholder=" الاسم من فضلك" />
+                </div>
+              </div>
+              <div class="email">
+                <label for="name">البريد الإلكتروني :</label>
+                <div class="container_input">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="البريد الالكتروني من فضلك"
+                  />
+                </div>
+              </div>
+              <div class="name_company">
+                <label for="name_company">اسم الشركة :</label>
+                <div class="container_input">
+                  <i class="fa-solid fa-building"></i>
+                  <input
+                    type="text"
+                    id="name_company"
+                    placeholder=" اسم شركتك من فضلك"
+                  />
+                </div>
+              </div>
+              <div class="type_company">
+                <label for="type_company">نوع الشركة :</label>
+                <div class="container_input">
+                  <i class="fa fa-email"></i>
+                  <input
+                    type="text"
+                    id="type_company"
+                    placeholder=" نوع شركتك من فضلك"
+                  />
+                </div>
+              </div>
+              <div class="phone_number">
+                <label for="type_company"> رقم التواصل :</label>
+                <div class="container_input">
+                  <i class="fa fa-phone"></i>
+                  <input
+                    style="direction: rtl"
+                    type="tel"
+                    id="phone_number"
+                    placeholder="اكتب رقم التواصل من فضلك"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <input type="submit" value="إرسال" class="my-5" />
+      </main>
+
+      <footer
+        class="mt-5 px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<style>
+  .join_us {
+    border-radius: 10px;
+  }
+  .join_us img {
+    margin-top: -50px;
+  }
+  .join_us p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: -50px;
+  }
+  ::placeholder {
+    font-size: 10px !important;
+  }
+  .container_form {
+    border-radius: 8px !important;
+  }
+</style>

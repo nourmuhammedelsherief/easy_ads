@@ -1,0 +1,180 @@
+@import url("../css/form.css");
+:root {
+  --main_color:#F79B36;
+  --second_color:#989898;
+  --black_color:#303030;
+  --bg-color:#E6EAEE;
+  --transtion:0.3s;
+  --bg-btn:#CACACA;
+  --bg-second:#F4F4F4;
+  --bg-main:#FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Readex Pro", sans-serif;
+}
+
+header h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+hr {
+  color: var(--second_color);
+}
+
+body {
+  font-family: "Readex Pro", sans-serif;
+  direction: rtl;
+  background: var(--bg-second);
+}
+
+.restrotion {
+  border-radius: 10px;
+  border: 1px solid var(--bg-color);
+}
+
+.global_btn {
+  background: var(--main_color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all var(--transtion) ease-in-out;
+  padding: 10px;
+}
+.global_btn:active, .global_btn:focus {
+  background-color: var(--bg-btn);
+}
+
+::-moz-placeholder {
+  font-size: 12px;
+}
+
+::placeholder {
+  font-size: 12px;
+}
+
+.mycontainer {
+  width: 38% !important;
+  direction: rtl !important;
+  margin: auto;
+  background: var(--bg-second);
+  padding: 0;
+}
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+  color: #303030;
+}
+a:hover {
+  color: #303030;
+}
+
+label {
+  font-size: 12px;
+}
+
+.header {
+  -moz-column-gap: 300px;
+       column-gap: 300px;
+  height: 55px;
+}
+.header i, .header a i {
+  font-size: 20px;
+}
+.header h5 {
+  font-weight: 400;
+  color: var(--black_color);
+}
+
+@media (max-width: 768px) {
+  .header {
+    -moz-column-gap: 120px;
+         column-gap: 120px;
+  }
+  header h5 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  input[type=submit] {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .global_btn a, .restrotion, .global_btn {
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+}
+footer {
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px rgba(219, 215, 215, 0.1411764706);
+  background: linear-gradient(180deg, #FFFFFF 10%, #e9e9e9 90%);
+}
+footer div {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all var(--transtion) ease-in-out;
+}
+footer div:hover {
+  background-color: white;
+}
+footer div:hover i {
+  color: #F79B36 !important;
+}
+footer div:hover a {
+  color: black !important;
+}
+footer div i {
+  font-size: 15px;
+}
+footer div a:nth-child(2) {
+  color: var(--second_color);
+  font-size: 12px;
+  line-height: 15px;
+}
+
+input[type=checkbox] {
+  accent-color: var(--main_color);
+}
+
+@media (max-width: 768px) {
+  .mycontainer {
+    width: 100% !important;
+    padding: 0;
+    margin: auto;
+  }
+  ::-moz-placeholder {
+    font-size: 10px;
+  }
+  ::placeholder {
+    font-size: 10px;
+  }
+  label {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+  .btn_home label, .location_branch label, .offcanvas-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .mycontainer {
+    width: 98% !important;
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+  }
+}/*# sourceMappingURL=global.css.map */

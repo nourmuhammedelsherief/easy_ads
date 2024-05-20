@@ -1,0 +1,68 @@
+.shareBtn ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333333;*/
+}
+
+.shareBtn ul li {
+    float: left;
+}
+
+.shareBtn ul li a {
+    display: block;
+    /*color: white;*/
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.shareBtn ul li a:hover {
+    background-color: #e1ca6c;
+}
+
+span.calories {
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 1000;
+    color: #000;
+    font-family: "Tajawal", sans-serif !important;
+    margin-bottom: 1px;
+    font-size: 13px;
+    letter-spacing: -0.4px;
+}
+
+h3 {
+    font-size: 18px !important;
+    line-height: 23px;
+}
+
+.list_Galler .image {
+    width: 100%;
+    height: 120px;
+}
+
+.list_Galler .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.list .image {
+    overflow: hidden;
+    width: 185px;
+    border-radius: 15px 15px 15px 15px;
+    height: 110px;
+}
+
+.description_meal {
+    font-size: 12px !important;
+    font-weight: 300 !important;
+}

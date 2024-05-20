@@ -1,0 +1,36 @@
+.offcanvas-backdrop {
+    width: 0vw !important; 
+    background-color: transparent !important;
+}
+.offcanvas {
+    width: 500px !important;
+    margin: auto;
+}
+.offcanvas.offcanvas-bottom {
+    height: 77%;
+    box-shadow: 1px 1px 1px 1px #dbd7d7;
+    border-radius: 10px;
+}
+.offcanvas-title{
+    margin: auto;
+}
+.offcanvas-body{
+    direction: rtl;
+}
+.btn_custom{
+    background: #EAEAEA;
+    font-size: 12px !important;
+    border-radius: 4px;
+
+    &:focus , &:hover{
+        // background: #EAEAEA;
+        outline: none;
+        border-color: none;
+        box-shadow: none;
+    }
+  }
+  .btn-close:focus ,.btn:focus {
+    box-shadow: none;
+    opacity: 0.5;
+  }
+ 

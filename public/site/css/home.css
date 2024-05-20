@@ -1,0 +1,201 @@
+@import url("../css/header.css");
+@import url("../css/form.css");
+@import url("../css/offcanvas.css");
+@import url("./global.css");
+.show_main_info {
+  background: var(--bg-second);
+}
+.show_main_info .slider {
+  width: 100%;
+}
+.show_main_info .description {
+  font-size: 12px;
+  font-weight: 400;
+}
+.show_main_info .location_branch .showBranch {
+  font-weight: 400;
+  font-size: 14px;
+}
+.show_main_info .main_dish .splide__slide {
+  margin: 0 5px;
+  width: 80px !important;
+}
+.show_main_info .main_dish .splide__slide h6 {
+  font-size: 12px;
+}
+.show_main_info .main_dish .splide__slide .image {
+  width: 80px;
+  height: 80px;
+}
+.show_main_info .main_dish .splide__slide .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.show_main_info .splide__list {
+  justify-content: center;
+}
+.show_main_info .main_dish .splide__slide.is-active img {
+  border: 4px solid var(--main_color);
+}
+
+.show_meals {
+  border-radius: 24px 24px 0px 0px;
+}
+.show_meals .search_meal {
+  border-radius: 10px;
+  border: 1px solid #F5F5F5;
+  color: var(--bg-btn);
+}
+.show_meals .search_meal i {
+  font-size: 12.5px;
+}
+.show_meals .search_meal ::-moz-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  color: #C7C7C7;
+}
+.show_meals .search_meal ::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  color: #C7C7C7;
+}
+.show_meals .search_meal input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+.list_Galler .image {
+  width: 100%;
+  height: 300px;
+}
+.list_Galler .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.list_Gallery .image {
+  width: 100%;
+}
+.list_Gallery .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.list,
+.list_Galler,
+.list_Gallery {
+  border-radius: 15px;
+}
+.list .content_list h3 a,
+.list_Galler .content_list h3 a,
+.list_Gallery .content_list h3 a {
+  font-size: 18px !important;
+}
+.list .content_list .more_details .action button,
+.list_Galler .content_list .more_details .action button,
+.list_Gallery .content_list .more_details .action button {
+  border: none;
+  background: none;
+}
+.list .content_list .more_details .action i,
+.list_Galler .content_list .more_details .action i,
+.list_Gallery .content_list .more_details .action i {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  background-color: #F8F8F8;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.list .content_list .more_details .action i:hover,
+.list_Galler .content_list .more_details .action i:hover,
+.list_Gallery .content_list .more_details .action i:hover {
+  background-color: var(--main_color);
+  color: white;
+}
+.list .content_list .more_details .price span,
+.list_Galler .content_list .more_details .price span,
+.list_Gallery .content_list .more_details .price span {
+  color: var(--main_color);
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.list .image {
+  overflow: hidden;
+  width: 200px;
+  border-radius: 15px 15px 15px 15px;
+  height: 140px;
+}
+.list .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.list .content_list .more_details {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.list_Gallery, .list {
+  box-shadow: 0 5px 7px 1px rgba(0, 0, 0, 0.27);
+}
+
+.list_Galler {
+  border: 1px solid #CCC;
+}
+
+@media (max-width: 768px) {
+  .content_list h3 a {
+    font-size: 12px !important;
+  }
+  .content_list p a {
+    font-size: 10px;
+  }
+  .content_list .more_details .action i {
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 12px;
+    margin-top: 10px;
+  }
+  .content_list .more_details .price span {
+    font-size: 14px;
+  }
+  .list_Galler .image {
+    height: 160px !important;
+  }
+  .list_Galler .image img {
+    height: 100%;
+    border-radius: 15px;
+  }
+}
+.nav-tabs .nav-link {
+  color: #909090;
+}
+
+.nav-tabs .nav-link:hover {
+  color: black;
+}
+
+.content_list p a {
+  color: #909090;
+  font-size: 14px;
+}/*# sourceMappingURL=home.css.map */

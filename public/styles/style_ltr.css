@@ -1,0 +1,140 @@
+*{
+	/* direction: ltr !important; */
+}
+.site-title{
+	display: block !important;
+}
+.site-title > div {
+	float:left;
+	display: inline;
+}
+.site-title .restaurant-title{
+	width: calc(100% - 90px);
+	text-align: left !important;
+	padding-left: 1rem !important;
+	padding-right: 0rem !important;
+}
+.list-custom-small a i:last-child{
+	float: right;
+}
+.list-custom-small a span:first-child{
+	float: left;
+}
+.row{
+	flex-direction: row-reverse;;
+}
+.pop.sensitive{
+	text-align: left;
+
+}
+.btn-share,
+.icon-button.share{
+	position: absolute;
+    top: 17px;
+    left: 15px;
+}
+.rateUs *{
+	text-align: left;
+	direction: ltr;;
+}
+.rateUs label{
+	display: block;
+	text-align: left;
+}
+.rateUs .form-group.rate-us .float-right{
+	float: left !important
+}
+.rateUs .form-group.rate-us .float-left{
+	float: right !important
+}
+.prodcontent .d-flex{
+	flex-direction: row;
+}
+#box{
+	direction: ltr;
+}
+.product-name{
+	text-align: left;
+	padding-left: 0 !important;
+	padding-right: 30px;
+}
+.product-name .poster-image{
+	left: unset;
+	right: 3px;
+}
+.product-details .product-title{
+	text-align: left;
+	direction: ltr;
+}
+.product-details input.addition{
+	text-align: center;;
+	direction: rtl;
+}
+.product-details .content > h4{
+	text-align: left;
+}
+.product-details .content .fac .float-left{
+	float: right !important;
+	direction: ltr;
+}
+.product-details .content .fac label{
+	text-align: left;;
+}
+
+.product-details .content .fac label span:last-child {
+	text-align: left;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+.product-details .content .fac .checkmark{
+	right: unset;
+	left: -4px;
+}
+.cart-content .fac .checkmark {
+	left: -27px;
+}
+.cart-content .fac{
+	margin-right: 0 !important;
+	margin-left: 1.5rem !important;
+}
+.product-details .content .fac .d-flex{
+	flex-direction: row;
+}
+.cart-content .text-right{
+	text-align: left !important;
+}
+
+.cart-content .text-left{
+	text-align: right !important;
+	direction: ltr !important;
+}
+.cart-content .row > div {
+	text-align: left ;
+	direction: ltr !important;
+}
+.cart-content .float-left{
+	float: right !important;
+}
+
+.cart-content .form-group{
+	text-align: left;
+	direction: ltr;
+}
+form .row > div {
+	text-align: left;
+}
+.toast-message{
+	text-align: left !important;
+}
+.page-content > .cart-count .cart-btn{
+	direction: ltr;
+}
+.cart-content .order-d > div.row:first-child{
+	margin-left: 0;
+	margin-right: 25px;
+  }
+  .cart-content .order-d .delete-order{
+	left: unset;
+	right: 0;
+  }

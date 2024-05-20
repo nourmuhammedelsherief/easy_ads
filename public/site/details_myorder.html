@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل الطلب</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <div class="header d-flex align-items-center bg-white p-3">
+        <a href="home.html" style="color: black">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <h5>تفاصيل الطلب</h5>
+      </div>
+      <div class="orderId bg-white p-3">
+        <div class="details_order">
+          <h6 class="numberOrder">الطلب رقم 6546-A</h6>
+          <h6 class="date my-2">
+            <i class="fa-regular fa-clock prv_order"></i>
+            09 September 2023 7:00 PM
+          </h6>
+        </div>
+        <div class="details_restaurant my-2 d-flex gap-2">
+          <div class="name_restaurat my-2 d-flex">
+            <img src="./image//logo.png" alt="logo" width="28" height="28" />
+            <small>برغر كينغ</small>
+          </div>
+          <div class="meals d-flex flex-column align-items-center my-1 gap-2">
+            <div class="myMeal d-flex gap-2 w-100">
+              <div class="image"><img src="./image/cover1.jpg" /></div>
+              <div>
+                <h6 class="d-inline-block">اسم الوجبة</h6>
+                <span> x3</span>
+                <span class="price d-block"
+                  ><small class="font-weight-bold"> 45</small> ر.س</span
+                >
+              </div>
+            </div>
+            <div class="myMeal d-flex gap-2 w-100">
+              <div class="image"><img src="./image/cover1.jpg" /></div>
+              <div>
+                <h6 class="d-inline-block">اسم الوجبة</h6>
+                <span> x3</span>
+                <span class="price d-block"
+                  ><small class="font-weight-bold"> 45</small> ر.س</span
+                >
+              </div>
+            </div>
+            <div class="myMeal d-flex gap-2 w-100">
+              <div class="image"><img src="./image/cover1.jpg" /></div>
+              <div>
+                <h6 class="d-inline-block">اسم الوجبة</h6>
+                <span> x3</span>
+                <span class="price d-block"
+                  ><small class="font-weight-bold"> 45</small> ر.س</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Meals for each restaurant -->
+        <hr />
+        <div>
+          <h6 class="d-inline-block">الإجمالي</h6>
+          <span class="price d-inline-block mx-2"
+            ><small class="font-weight-bold"> 45</small> ر.س</span
+          >
+        </div>
+        <hr />
+        <div class="share_code d-flex flex-column align-items-center gap-2">
+          <img src="./image//Qr.jpg" alt="share-code" class="d-block m-auto" />
+          <div>
+            <i class="fa-solid fa-share-nodes"></i>
+            <p class="d-inline-block mx-1">مشاركة الكود</p>
+          </div>
+        </div>
+        <button class="global_btn m-auto d-block my-5">
+          <a href="details_myorder.html" class="text-white">
+            <i class="fa-solid fa-rotate-right"></i>
+            إعادة الطلب مجددا
+          </a>
+        </button>
+      </div>
+      <footer
+        class="mt-5 px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<style>
+  .orderId {
+    border-radius: 10px;
+    margin: 20px 60px;
+  }
+
+  .orderId .time,
+  .orderId .time i {
+    color: var(--second_color);
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .myMeal .image {
+    width: 55px;
+    height: 55px;
+  }
+  .myMeal .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .myMeal span {
+    color: var(--main_color);
+  }
+  .price {
+    font-weight: 300;
+    color: var(--second_color) !important;
+    font-size: 13px;
+  }
+  .price small {
+    color: var(--black_color) !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+  }
+  .name_restaurat small {
+    display: inline-block;
+    width: 70px;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+    .orderId {
+      margin: 20px 10px;
+    }
+  }
+</style>

@@ -1,0 +1,50 @@
+*{
+	direction: ltr;
+}
+.login-box input{
+	text-align: left;
+	
+}
+.login-box input#remember{
+	position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.text-right {
+	text-align: left !important;
+}
+/* .title_celeste{
+	text-align: left !important;
+} */
+
+.login-box .summery .row > div:first-child{
+	text-align: left;
+}
+.login-box .summery .row > div:last-child{
+	text-align: right;
+}
+.login-box #send_form{
+	font-size: 0.8rem;
+}
+.login-box > .mobile-code > p{
+	text-align: left !important;
+}
+.login-logo .change-lang{
+	top: -13px !important;
+    right: -8px !important;
+    left: unset !important;
+}
+
+.mr-auto-navbav{
+	margin-right: unset !important;
+	margin-left: auto !important;
+}
+.questions-content .title_celeste{
+	text-align: left !important;
+}
+.questions-content .title_celeste i{
+	float:right !important;
+}
+.questions-content .toggle-content{
+	text-align: left !important;
+}

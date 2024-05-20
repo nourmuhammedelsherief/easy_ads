@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متابعة الطلب</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <header
+        class="d-flex align-items-center bg-white p-3 justify-content-between"
+      >
+        <a href="home.html" style="color: black">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <h5>متابعة الطلب</h5>
+        <i class="fa-regular fa-bell"></i>
+      </header>
+
+      <main>
+        <div
+          class="d-flex flex-column align-items-center px-2 justify-content-center"
+        >
+          <form>
+            <h6 class="my-3">اختر طريقة الدفع</h6>
+            <div class="apple_pay bg-white my-2 p-2">
+              <input type="radio" id="apple_pay" name="pay" />
+              <label for="apple_pay"> Apple Pay</label>
+            </div>
+            <div class="Credit_pay my-2 p-2 bg-white">
+              <input type="radio" id="Credit_pay" name="pay" />
+              <label for="Credit_pay"> Credit Card</label>
+            </div>
+            <a href="thankU.html" class="global_btn">
+              الدفع
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+          </form>
+        </div>
+      </main>
+      <footer
+        class="px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+    <!-- <script>
+      const form = document.getElementById("myform");
+      const submitBtn = document.getElementById("submitbtn");
+      const endThank = document.getElementById("end_thank");
+      const overlay = document.getElementById("overlay");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("sdkj");
+        // endThank.classList.add("show");
+        // overlay.classList.add("show");
+      });
+
+      overlay.addEventListener("click", function () {
+        endThank.classList.remove("show");
+        overlay.classList.remove("show");
+      });
+    </script> -->
+  </body>
+</html>
+<style>
+  h6 {
+    font-size: 14px;
+  }
+  .Credit_pay,
+  .apple_pay {
+    border-radius: 8px;
+  }
+  .global_btn {
+    width: 150px;
+    margin: 100px auto;
+    font-size: 14px !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .global_btn i {
+    color: white;
+  }
+</style>

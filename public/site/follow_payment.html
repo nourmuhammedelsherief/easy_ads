@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>معلومات مرسل العزيمة</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <header
+        class="d-flex align-items-center bg-white p-3 justify-content-between"
+      >
+        <a href="home.html" style="color: black">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <h5>معلومات مرسل العزيمة</h5>
+        <i class="fa-regular fa-bell"></i>
+      </header>
+
+      <main class="px-1">
+        <p class="my-2 px-1">
+          حتى تتمكن من إرسال عزيمة، يرجى إدخال المعلومات التالية:
+        </p>
+        <form>
+          <div class="inner_wrap bg-white p-2 my-2">
+            <div class="name">
+              <label for="name">الاسم :</label>
+              <div class="container_input">
+                <i class="fa fa-user"></i>
+                <input type="text" id="name" placeholder=" الاسم من فضلك" />
+              </div>
+            </div>
+            <div class="phone_number">
+              <label for="type_company"> رقم الهاتف :</label>
+              <div class="container_input">
+                <i class="fa fa-phone"></i>
+                <input
+                  style="direction: rtl"
+                  type="tel"
+                  id="phone_number"
+                  placeholder="اكتب رقم التواصل من فضلك"
+                />
+              </div>
+            </div>
+            <div class="notes mx-2 p-1 mb-3">
+              <ul class="mx-4">
+                <li class="my-1">رقم الهاتف لايظهر للمستلم</li>
+                <li>سيتم إرسال رمز تحقق لرقم الهاتف</li>
+              </ul>
+            </div>
+            <div id="loadingContainer" style="display: none">
+              <div id="loadingAnimation" class="loading-animation"></div>
+              <div id="loadingAnimation" class="loading-animation"></div>
+              <div id="loadingAnimation" class="loading-animation"></div>
+            </div>
+            <div id="verificationContainer" style="display: none">
+              <label for="verificationCodeInput"> ادخل رقم التحقق</label>
+              <input
+                type="text"
+                id="verificationCodeInput"
+                placeholder="رقم التحقق "
+              />
+              <!-- <button id="verifyButton">Verify</button> -->
+            </div>
+          </div>
+          <input type="submit" id="submitButton" value="إرسال رمز التحقيق " />
+          <button class="global_btn m-auto" id="global_btn">
+            <a href="cart.html" class="text-white"> الدخول إلي سلة الشراء </a>
+          </button>
+        </form>
+      </main>
+      <footer
+        class="px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<script>
+  const submitButton = document.getElementById("submitButton");
+  const global_btn = document.getElementById("global_btn");
+  const loadingContainer = document.getElementById("loadingContainer");
+  const verificationContainer = document.getElementById(
+    "verificationContainer"
+  );
+  const verificationCodeInput = document.getElementById(
+    "verificationCodeInput"
+  );
+  // const verifyButton = document.getElementById("verifyButton");
+
+  submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Show loading container
+    loadingContainer.style.display = "flex";
+
+    // Simulate loading delay
+    setTimeout(function () {
+      // Hide loading container
+      loadingContainer.style.display = "none";
+
+      // Show verification input
+      verificationContainer.style.display = "block";
+      verificationCodeInput.focus();
+      submitButton.style.display = "none";
+      global_btn.style.display = "block";
+    }, 2000);
+  });
+</script>
+<style>
+  .notes {
+    background: #f79b361a;
+    border-radius: 4px;
+  }
+  .notes ul li {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  p,
+  label {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .inner_wrap {
+    border-radius: 8px;
+  }
+  #submitButton {
+    display: block;
+  }
+  #submitButton {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 100px;
+  }
+  #global_btn {
+    display: none;
+    font-size: 14px !important;
+    margin-top: 100px !important;
+  }
+  #loadingContainer {
+    justify-content: center;
+  }
+  .loading-animation {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--main_color);
+    animation: loading 1s infinite ease-in-out;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+</style>

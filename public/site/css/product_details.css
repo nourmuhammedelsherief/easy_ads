@@ -1,0 +1,139 @@
+.name_meal {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.description_meal {
+    font-size: 12px !important;
+    font-weight: 300 !important;
+}
+
+.choose_details {
+    background-color: var(--bg-second);
+    border-radius: 8px;
+}
+
+.choose_details label,
+h4 {
+    font-size: 14px;
+}
+
+.choose_details .main_prcie {
+    font-size: 14px !important;
+    font-size: 500 !important;
+}
+
+@media (max-width: 768px) {
+    .choose_details h4,
+    label {
+        font-size: 12px !important;
+        font-weight: 500;
+    }
+
+    .choose_details,
+    .add_cart button,
+    .price_addition {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.meals_deatails p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.choose_details .addition {
+    background-color: var(--main_color);
+    border-radius: 0px 0 15px 15px;
+}
+
+.addition button,
+form button {
+    background: #fdb96f;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 10px;
+    color: var(--main_color);
+}
+
+.addition button:active,
+.addition button:focus {
+    background: white;
+}
+
+form button:active,
+form button:focus {
+    color: white;
+}
+
+.addition button:active,
+.addition button:focus {
+    color: var(--main_color);
+}
+
+.share_icon button {
+    width: 154px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: max-content;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    padding: 6px;
+}
+
+.totalCount {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px !important;
+    border-color: rgba(0, 0, 0, 0.1);
+    /* display: block; */
+    width: 10%;
+    height: 25px;
+    line-height: 47px;
+    padding: -52px 78px;
+    font-size: 14px;
+    /*!* -webkit-appearance: none;*/
+}
+
+.optionCount {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px !important;
+    border-color: rgba(0, 0, 0, 0.1);
+    /* display: block; */
+    width: 10%;
+    height: 25px;
+    line-height: 47px;
+    padding: -52px 78px;
+    font-size: 14px;
+    /*!* -webkit-appearance: none;*/
+}
+
+.shareBtn ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333333;*/
+}
+
+.shareBtn ul li {
+    float: left;
+}
+
+.shareBtn ul li a {
+    display: block;
+    /*color: white;*/
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.shareBtn ul li a:hover {
+    background-color: #e1ca6c;
+}
+span.calories {
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+}

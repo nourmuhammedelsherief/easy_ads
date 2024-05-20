@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الاشعارات</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <!-- <link rel="stylesheet" href="css/home.css" /> -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <header
+        class="d-flex align-items-center justify-content-between bg-white p-3"
+      >
+        <a href="home.html" style="color: black">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <h5>الاشعارات</h5>
+        <i class="fa-regular fa-bell"></i>
+      </header>
+      <main>
+        <div class="notifecation bg-white m-3 px-2 py-3">
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon">
+              <img src="./image/natifacation.jpg" alt="" />
+            </div>
+            <div class="content">
+              <div
+                class="d-flex align-items-center justify-content-between time"
+              >
+                <p>تم تأكيد الطلب</p>
+                <p>
+                  <i class="fa-regular fa-clock prv_order mx-1"></i> منذ ساعتين
+                </p>
+              </div>
+              <hr />
+              <p class="number_order mt-2">
+                الطلب رقم 542354 في مطعم برغر كينغ تم تأكيده
+              </p>
+            </div>
+          </div>
+
+          <div class="details d-flex justify-content-end mx-3">
+            <a class="text-center" href="#"> تفاصيل الطلب </a>
+          </div>
+        </div>
+        <div class="notifecation bg-white m-3 px-2 py-3">
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon">
+              <img src="./image/icon2.jpg" alt="" />
+            </div>
+            <div class="content">
+              <div
+                class="d-flex align-items-center justify-content-between time"
+              >
+                <p>عرض جديد بخصم 15%</p>
+                <p>
+                  <i class="fa-regular fa-clock prv_order mx-1"></i> منذ ساعتين
+                </p>
+              </div>
+              <hr />
+              <div class="deatils_meal d-flex mt-2 gap-2">
+                <div class="image">
+                  <img src="./image/bake.jpg" alt="" />
+                </div>
+                <div>
+                  <h6>اسم الوجبة</h6>
+                  <div class="price">
+                    <del>60</del>
+                    <span>45.5</span>
+                    <small> ر.س</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="mt-5 px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<style>
+  .notifecation {
+    border-radius: 8px;
+  }
+  .notifecation .icon {
+    width: 39.46px;
+    height: 39px;
+  }
+  .notifecation .icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .time p:first-child {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .time p:last-child {
+    font-size: 8px;
+    font-weight: 400;
+    color: #989898;
+  }
+  .number_order {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  hr {
+    margin: 0 !important;
+  }
+  .details a {
+    width: 154px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    padding: 6px;
+  }
+  .deatils_meal .image {
+    width: 50px;
+    height: 50px;
+  }
+  .deatils_meal .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+  }
+  .deatils_meal h6 {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .price del,
+  .price span {
+    font-size: 14px;
+  }
+  .price small {
+    font-size: 10px;
+    color: #989898;
+  }
+  .price span {
+    color: var(--main_color);
+  }
+</style>

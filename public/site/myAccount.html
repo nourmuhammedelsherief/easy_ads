@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حسابي</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer">
+      <header
+        class="bg-white mb-4 p-3 d-flex align-items-center justify-content-between"
+      >
+        <!-- show mobile -->
+        <div class="mobile_screen">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end offcanvas_mobile"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="container_ifno">
+                <div class="image">
+                  <img src="./image/3azmak.png" alt="3azmak_title" />
+                </div>
+                <h2 class="name">فهد الغامري</h2>
+                <ul class="p-0">
+                  <hr />
+                  <li class="my-2">
+                    <i class="fa-solid fa-globe mx-2"></i> تغيير اللغة
+                  </li>
+                  <hr />
+                  <!-- <li class="my-2">
+                    <i class="fa-solid fa-gear mx-2"></i> الإعدادت
+                  </li>
+                  <hr /> -->
+                  <li class="my-2">
+                    <a href="Terms&Conditions.html">
+                      <i class="fa-solid fa-file-contract mx-2"></i> الشروط
+                      والأحكام</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="my-2">
+                    <a href="contactUS.html">
+                      <i class="fa-solid fa-envelope mx-2"></i> تواصل معنا</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="my-2">
+                    <a href="aboutApp.html">
+                      <i class="fa-solid fa-circle-exclamation mx-2"></i> حول
+                      التطبيق</a
+                    >
+                  </li>
+                  <hr />
+                </ul>
+                <button class="joinUs_btn">
+                  <a href="joinUs.html">
+                    <i class="fa-regular fa-star mx-1"></i> انضم إلينا</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5>حسابي</h5>
+        <div class="icons">
+          <i class="fa-regular fa-bell mx-3"></i>
+        </div>
+      </header>
+      <div class="myinfo bg-white p-5 text-center">
+        <img src="./image/Qr.jpg" alt="QR" class="d-block m-auto" />
+        <h5 class="name my-3">فهد العامري</h5>
+        <div class="email">
+          <i class="fa-regular fa-envelope"></i>
+          <span>tqnee.fahad@gmail.com</span>
+        </div>
+        <div class="mynumber">
+          <i class="fa-solid fa-phone"></i>
+          <span>+966 123456789</span>
+        </div>
+        <div class="mylocation">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>الخبر، السعودية</span>
+        </div>
+      </div>
+      <!-- end info page -->
+      <div class="edit_myAccount bg-white">
+        <a href="edit_myAccount.html">
+          <i class="fa-solid fa-pen"></i>
+          <span> تعديل معلومات الحساب</span>
+        </a>
+      </div>
+      <div class="changePassword bg-white">
+        <a href="changePassword.html">
+          <i class="fa-solid fa-lock"></i>
+          <span> تغيير كلمة المرور</span>
+        </a>
+      </div>
+      <footer
+        class="px-4 py-3 d-flex align-items-center justify-content-around"
+      >
+        <div class="mainHome d-flex flex-column align-items-center">
+          <a href="home.html"> <i class="fa fa-house"></i></a>
+          <a href="home.html"> الرئيسية</a>
+        </div>
+        <div class="myorder d-flex flex-column align-items-center">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="cart.html"> طلباتي</a>
+        </div>
+        <div class="myAccount d-flex flex-column align-items-center">
+          <a href="myAccount.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="myAccount.html"> حسابي</a>
+        </div>
+      </footer>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
+<style>
+  .edit_myAccount,
+  .changePassword {
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 8px;
+    padding: 6px 16px 6px 16px;
+    font-size: 14px;
+  }
+  .edit_myAccount i,
+  .changePassword i {
+    font-size: 13px;
+    margin: 0 7px;
+  }
+  .myinfo {
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 8px;
+  }
+  .myinfo i {
+    color: var(--main_color);
+    margin: 0 7px;
+    font-size: 16px;
+  }
+  .myinfo div {
+    margin: 10px 0;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  @media (max-width: 768px) {
+    .myinfo img {
+      width: 100%;
+    }
+    .edit_myAccount a span,
+    .changePassword span,
+    .email span,
+    .mynumber span,
+    .mylocation span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+</style>

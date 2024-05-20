@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="" dir="">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Example</title>
+
+	<link rel="stylesheet" href="css/splide.min.css">
+	<!-- <link rel="stylesheet" href="css/splide-core.min.css"> -->
+	<style>
+		.box{
+			
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			border:1px solid #080808;
+			transition: 0.8s ease;
+		}
+		.box:hove{
+			box-shadow: 0 1px 10px #CCC;
+			transition: 0.8s ease;
+		}
+	</style>
+</head>
+<body>
+
+	<section class="splide">
+		<div class="splide__slider">
+			  <div class="splide__track">
+				  <ul class="splide__list">
+					  <li class="splide__slide box"  data-splide-interval="1000">Slide 01</li>
+					  <li class="splide__slide box"  data-splide-interval="1000">Slide 02</li>
+					  <li class="splide__slide box"  data-splide-interval="1000">Slide 03</li>
+				  </ul>
+			  </div>
+		</div>
+	  
+		
+	  </section>
+		<!-- <div class="splide">
+			<div class="splide__track">
+					<div class="splide__list">
+						<div class="splide__slide box">1</div>
+						<div class="splide__slide box">2</div>
+						<div class="splide__slide box">3</div>
+						<div class="splide__slide box">4</div>
+						<div class="splide__slide box">5</div>
+						<div class="splide__slide box">6</div>
+						<div class="splide__slide box">7</div>
+					</div>
+			</div>
+			
+			
+
+		</div> -->
+
+
+
+	<!-- footer -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/splide.min.js"></script>
+
+	<script>
+		$(function(){
+			console.log('check new');
+			new Splide( '.splide', {
+				type    : 'loop',
+				autoplay: 'play',
+				perPage : 1,
+				autoWidth: true , 
+				interval : 1000,
+			} ).mount();
+		});
+	</script>
+
+</body>
+
+</html>

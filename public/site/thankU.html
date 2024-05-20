@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متابعة الطلب</title>
+    <!-- //font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //bootstrap -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="mycontainer bg-white">
+      <main class="bg-white">
+        <div
+          class="end_thank bg-white p-5 d-flex flex-column align-items-center"
+          id="end_thank"
+        >
+          <div class="image_thanks">
+            <img
+              src="./image/thankyou.jpg"
+              class="d-block m-auto"
+              alt="thank"
+            />
+          </div>
+          <h6>رقم الطلب : 6548-A</h6>
+          <h6>09 September 2023 7:00 PM</h6>
+          <div class="image_thanks">
+            <img src="./image/Qr.jpg" class="d-block m-auto" alt="code" />
+          </div>
+          <button><a href="home.html" class="text-white"> إغلاق</a></button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+<style>
+  main {
+    min-height: 100vh !important;
+  }
+  .image_thanks {
+    width: 300px;
+    margin: auto;
+  }
+  img {
+    width: 100%;
+  }
+  @media(max-width: 768px) {
+    .image_thanks {
+      width: 200px;
+      margin: auto;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .end_thank button {
+    background: var(--black_color);
+    display: block;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px auto;
+    font-size: 14px;
+  }
+  /* #end_thank.show {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  } */
+
+  /* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+  }
+
+  .overlay.show {
+    display: block;
+  } */
+
+  /* #end_thank {
+    border-radius: 18px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  } */
+</style>

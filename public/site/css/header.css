@@ -1,0 +1,61 @@
+@import url("./global.css");
+.joinUs_btn {
+  background: var(--main_color);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px 6px 12px;
+}
+.joinUs_btn a {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+header {
+  height: 50px;
+}
+header img {
+  height: 100%;
+}
+
+.mobile_screen .container_ifno {
+  width: 100%;
+}
+.mobile_screen .container_ifno .image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: -60px;
+}
+.mobile_screen .container_ifno .image img {
+  width: 100%;
+  height: 100%;
+}
+.mobile_screen .container_ifno .name {
+  text-align: center;
+  color: var(--main_color);
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.mobile_screen .container_ifno button {
+  margin: 50px auto;
+  width: 120px;
+  display: block;
+}
+.mobile_screen .container_ifno ul li {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .offcanvas.offcanvas_mobile {
+    width: 200px !important;
+  }
+  .name {
+    font-size: 14px;
+  }
+  li a, .joinUs_btn a {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=header.css.map */
