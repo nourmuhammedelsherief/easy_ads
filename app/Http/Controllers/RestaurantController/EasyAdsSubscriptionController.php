@@ -7,6 +7,7 @@ use App\Models\Bank;
 use App\Models\EasyAdsSellerCode;
 use App\Models\EasyAdsSetting;
 use App\Models\EasyAdsSubscription;
+use App\Models\EasyAdsHistory;
 use App\Models\Restaurant;
 use App\Models\RestaurantTermsCondition;
 use Carbon\Carbon;
@@ -48,7 +49,7 @@ class EasyAdsSubscriptionController extends Controller
         $restaurant = Restaurant::findOrFail($id);
         $setting = EasyAdsSetting::first();
         $name = $restaurant->name_en;
-        $token = $setting->online_token;
+        $token = $setting->myFatoourah_token;
         $amount = $setting->subscription_amount;
         $seller_code = null;
         $tax = $setting->tax;
@@ -120,7 +121,7 @@ class EasyAdsSubscriptionController extends Controller
                 'CustomerMobile' => $restaurant->phone_number,
                 'CustomerEmail' => $restaurant->email,
                 'InvoiceValue' => $amount,
-                'CallBackUrl' => route('AZSubscriptionStatusF'),
+                'CallBackUrl' => route('EasyAdsSubscriptionStatusF'),
                 'ErrorUrl' => route('restaurant.home'),
                 'Language' => app()->getLocale(),
                 'CustomerReference' => 'ref 1',
@@ -168,9 +169,9 @@ class EasyAdsSubscriptionController extends Controller
                         'invoice_id' => $result->Data->InvoiceId,
                     ]);
                 }
-                AZRestaurantInfo::updateOrCreate(
-                    ['restaurant_id' => $restaurant->id],
-                );
+//                AZRestaurantInfo::updateOrCreate(
+//                    ['restaurant_id' => $restaurant->id],
+//                );
                 return redirect()->to($result->Data->PaymentURL);
             } else {
                 flash(trans('messages.paymentError'))->error();
@@ -188,8 +189,9 @@ class EasyAdsSubscriptionController extends Controller
                     'tax_value' => $tax_value,
                     'discount_value' => $discount,
                 ]);
+                $subscription = $restaurant->ads_subscription;
             } else {
-                EasyAdsSubscription::create([
+                $subscription = EasyAdsSubscription::create([
                     'restaurant_id' => $restaurant->id,
                     'payment_type' => 'online',
                     'payment' => 'false',
@@ -201,10 +203,13 @@ class EasyAdsSubscriptionController extends Controller
                     'discount_value' => $discount,
                 ]);
             }
-            AZRestaurantInfo::updateOrCreate(
-                ['restaurant_id' => $restaurant->id],
-            );
-            return redirect()->to(payLinkAddInvoice($amount , $restaurant->email,$restaurant->phone_number,$restaurant->name_en,$restaurant->ads_subscription->id , route('AZSubscriptionPayLinkStatus' , $restaurant->id)));
+//            AZRestaurantInfo::updateOrCreate(
+//                ['restaurant_id' => $restaurant->id],
+//            );
+            if ($subscription)
+            {
+                return redirect()->to(payLinkAddInvoice($amount , $restaurant->email,$restaurant->phone_number,$restaurant->name_en,$subscription->id , route('EasyAdsSubscriptionPayLinkStatus' , $restaurant->id)));
+            }
         }
     }
 
@@ -227,7 +232,7 @@ class EasyAdsSubscriptionController extends Controller
     public function subscription_status(Request $request)
     {
         $setting = EasyAdsSetting::first();
-        $token = $setting->online_token;
+        $token = $setting->myFatoourah_token;
         $PaymentId = $request->query('paymentId');
         $resData = MyFatoorahStatus($token, $PaymentId);
         $result = json_decode($resData);
@@ -235,7 +240,7 @@ class EasyAdsSubscriptionController extends Controller
             $InvoiceId = $result->Data->InvoiceId;
             $subscription = EasyAdsSubscription::whereInvoiceId($InvoiceId)->first();
             // store operation at history
-            AzHistory::create([
+            EasyAdsHistory::create([
                 'restaurant_id' => $subscription->restaurant_id,
                 'seller_code_id' => $subscription->seller_code_id,
                 'paid_amount' => $subscription->price,
@@ -253,7 +258,7 @@ class EasyAdsSubscriptionController extends Controller
                 'subscription_type' => $subscription->status == 'finished' ? 'renew' : 'new',
                 'invoice_id' => null,
             ]);
-            $this->create_default_data($subscription->restaurant_id);
+//            $this->create_default_data($subscription->restaurant_id);
             flash(trans('messages.paymentDoneSuccessfully'))->success();
             return redirect()->route('restaurant.home');
         } else {
@@ -267,13 +272,13 @@ class EasyAdsSubscriptionController extends Controller
         $restaurant  = Restaurant::find($id);
         $subscription = $restaurant->ads_subscription;
         // store operation at history
-        AzHistory::create([
+        EasyAdsHistory::create([
             'restaurant_id' => $subscription->restaurant_id,
             'seller_code_id' => $subscription->seller_code_id,
             'paid_amount' => $subscription->price,
             'discount' => $subscription->discount_value,
             'tax' => $subscription->tax_value,
-            'invoice_id' => $subscription->id,
+            'invoice_id' => $subscription->invoice_id,
             'payment_type' => 'online',
             'subscription_type' => $subscription->status == 'finished' ? 'renew' : 'new',
             'details' => $subscription->status == 'finished' ? trans('messages.renew_subscription') : trans('messages.new_subscription'),
@@ -284,7 +289,7 @@ class EasyAdsSubscriptionController extends Controller
             'end_at' => Carbon::now()->addYear(),
             'subscription_type' => $subscription->status == 'finished' ? 'renew' : 'new',
         ]);
-        $this->create_default_data($subscription->restaurant_id);
+//        $this->create_default_data($subscription->restaurant_id);
         flash(trans('messages.paymentDoneSuccessfully'))->success();
         return redirect()->route('restaurant.home');
     }

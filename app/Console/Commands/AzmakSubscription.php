@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
-use App\Models\AzSubscription;
+use App\Models\EasyAdsSubscription;
 
 
 class AzmakSubscription extends Command
@@ -14,7 +14,7 @@ class AzmakSubscription extends Command
      *
      * @var string
      */
-    protected $signature = 'azmak:subscription';
+    protected $signature = 'easy_ads:subscription';
 
     /**
      * The console command description.
@@ -28,7 +28,7 @@ class AzmakSubscription extends Command
      */
     public function handle()
     {
-        $subscriptions = AzSubscription::whereStatus('active')->get();
+        $subscriptions = EasyAdsSubscription::whereStatus('active')->get();
         if ($subscriptions->count() > 0)
         {
             foreach ($subscriptions as $subscription)

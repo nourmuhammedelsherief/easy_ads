@@ -4,15 +4,15 @@ namespace App\Http\Controllers\AdminController;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Restaurant;
 
-class AZRestaurantController extends Controller
+class EasyAdsRestaurantController extends Controller
 {
     public function index($status)
     {
-        $restaurants = Restaurant::with('az_subscription')
-            ->whereHas('az_subscription', function ($q) use ($status) {
+        $restaurants = Restaurant::with('ads_subscription')
+            ->whereHas('ads_subscription', function ($q) use ($status) {
                 $q->whereStatus($status);
             })->paginate(200);
         return view('admin.restaurants.index', compact('restaurants', 'status'));
@@ -61,5 +61,4 @@ class AZRestaurantController extends Controller
         flash(trans('messages.updated'))->success();
         return redirect()->route('restaurants', $restaurant->az_subscription->status);
     }
-
 }

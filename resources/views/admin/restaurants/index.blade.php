@@ -11,7 +11,7 @@
         @lang('messages.free_restaurants')
     @endif
 @endsection
-composer create-project laravel/laravel version11Test
+
 @section('style')
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('admin/css/sweetalert.css') }}">
@@ -146,11 +146,10 @@ composer create-project laravel/laravel version11Test
                                 <th></th>
                                 <th>@lang('messages.name')</th>
                                 <th>@lang('messages.phone_number')</th>
-                                <th>@lang('messages.country')</th>
                                 <th>@lang('messages.restaurant')</th>
-                                <th>@lang('messages.products')</th>
-                                <th> @lang('messages.branches') </th>
-                                <th> @lang('messages.clients') </th>
+{{--                                <th>@lang('messages.products')</th>--}}
+{{--                                <th> @lang('messages.branches') </th>--}}
+{{--                                <th> @lang('messages.clients') </th>--}}
                                 <th> @lang('messages.payment_type') </th>
                                 <th>@lang('messages.operations')</th>
                             </tr>
@@ -210,22 +209,23 @@ composer create-project laravel/laravel version11Test
                                             <i class="fa fa-eye"></i>
                                         </a>
                                     </td>
-                                    <td>
-                                        {{$restaurant->products->count()}}
-                                    </td>
-                                    <td>
-                                        {{$restaurant->branches->count()}}
-                                    </td>
-                                    <td>
-                                        <a href="{{route('AzRestaurantUsers' , $restaurant->id)}}" class="btn btn-success">
-                                            {{$restaurant->users->count()}}
-                                        </a>
-                                    </td>
+{{--                                    <td>--}}
+{{--                                        {{$restaurant->products->count()}}--}}
+{{--                                    </td>--}}
+{{--                                    <td>--}}
+{{--                                        {{$restaurant->branches->count()}}--}}
+{{--                                    </td>--}}
+{{--                                    <td>--}}
+{{--                                        <a href="{{route('AzRestaurantUsers' , $restaurant->id)}}" class="btn btn-success">--}}
+{{--                                            {{$restaurant->users->count()}}--}}
+{{--                                        </a>--}}
+{{--                                    </td>--}}
                                     <td>
                                         @if($restaurant->a_z_orders_payment_type == 'myFatoourah')
                                             @lang('messages.myFatoourah')
                                         @elseif($restaurant->a_z_orders_payment_type == 'tap')
-                                            @lang('messages.tap')
+                                        <th>@lang('messages.country')</th>
+                                        @lang('messages.tap')
                                         @elseif($restaurant->a_z_orders_payment_type == 'edfa')
                                             @lang('messages.edfa')
                                         @elseif($restaurant->a_z_orders_payment_type == 'payLink')
@@ -263,10 +263,10 @@ composer create-project laravel/laravel version11Test
                                             </span>
                                         </li>
                                         <li class="login_res">
-                                            <a class="btn btn-info"
-                                               href="{{ route('AzRestaurantCommissions', $restaurant->id) }}">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
+{{--                                            <a class="btn btn-info"--}}
+{{--                                               href="{{ route('AzRestaurantCommissions', $restaurant->id) }}">--}}
+{{--                                                <i class="fa fa-eye"></i>--}}
+{{--                                            </a>--}}
                                             <span class="show_text">
                                                 @lang('messages.commission_system')
                                             </span>

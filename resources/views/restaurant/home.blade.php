@@ -159,29 +159,29 @@
                             </h3>
                         </div>
                     </div>
-                    <div>
-                        <i class="fas fa-money-bill bg-info"></i>
-                        <div class="timeline-item">
-                            <h3 class="timeline-header border-0">
-                                @lang('messages.total_menu_views')
-                                <a href="#">
-                                    {{$user->az_info?->menu_views}}
-                                </a>
-                            </h3>
-                        </div>
-                    </div>
-                    <hr>
-                    <div>
-                        <i class="fas fa-money-bill bg-info"></i>
-                        <div class="timeline-item">
-                            <h3 class="timeline-header border-0">
-                                @lang('messages.restaurant_az_commission')
-                                <a href="#">
-                                    {{$user->az_commission}} %
-                                </a>
-                            </h3>
-                        </div>
-                    </div>
+{{--                    <div>--}}
+{{--                        <i class="fas fa-money-bill bg-info"></i>--}}
+{{--                        <div class="timeline-item">--}}
+{{--                            <h3 class="timeline-header border-0">--}}
+{{--                                @lang('messages.total_menu_views')--}}
+{{--                                <a href="#">--}}
+{{--                                    {{$user->az_info?->menu_views}}--}}
+{{--                                </a>--}}
+{{--                            </h3>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <hr>--}}
+{{--                    <div>--}}
+{{--                        <i class="fas fa-money-bill bg-info"></i>--}}
+{{--                        <div class="timeline-item">--}}
+{{--                            <h3 class="timeline-header border-0">--}}
+{{--                                @lang('messages.restaurant_az_commission')--}}
+{{--                                <a href="#">--}}
+{{--                                    {{$user->az_commission}} %--}}
+{{--                                </a>--}}
+{{--                            </h3>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                 @elseif($subscription and $subscription->status == 'free' )
 

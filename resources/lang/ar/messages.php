@@ -253,6 +253,7 @@ return [
     'a_z_edfa_merchant' => 'الكي الخاص بأدفع باي',
     'a_z_edfa_password' => 'كلمة المرور الخاصة بأدفع باي',
     'new_subscription' => 'أشتراك جديد للمطعم',
+    'renewEasyAdsSubscription' => 'تجديد اشتراك المطعم',
     'renew_subscription' => 'تجديد اشتراك المطعم',
     'subscription_amount' => 'قيمة الاشتراك في أعلانات إيزي',
     'subscription_tax' => 'قيمه الضريبة لاشتراك أعلانات إيزي',

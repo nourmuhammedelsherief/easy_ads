@@ -77,7 +77,7 @@ use \App\Http\Controllers\AdminController\Admin\ForgotPasswordController;
 use \App\Http\Controllers\AdminController\Admin\ResetPasswordController;
 use App\Http\Controllers\AdminController\AdminDetailController;
 use \App\Http\Controllers\AdminController\HomeController;
-use \App\Http\Controllers\AdminController\AZRestaurantController;
+use \App\Http\Controllers\AdminController\EasyAdsRestaurantController;
 use \App\Http\Controllers\AdminController\AZCommissionController;
 use \App\Http\Controllers\AdminController\BankTransferController;
 use \App\Http\Controllers\AdminController\ReportController;
@@ -417,7 +417,7 @@ Route::prefix('admin')->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('admin.logout');
 
     Route::group(['middleware' => ['web', 'auth:admin']], function () {
-        Route::controller(AZRestaurantController::class)->group(function () {
+        Route::controller(EasyAdsRestaurantController::class)->group(function () {
             Route::get('/restaurants/{restaurant}/login', 'loginToRestaurant')->name('admin.restaurant.login');
             Route::get('/restaurants/{status}', 'index')->name('restaurants');
             Route::get('/restaurant_gold/{status}', 'index_gold')->name('restaurants_gold');

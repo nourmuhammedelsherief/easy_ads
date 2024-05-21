@@ -115,86 +115,86 @@
                      with font-awesome or any other icon font library -->
 
                 <!--teeeeeeeeeeeeeeeeest-->
-{{--                <li class="nav-item has-treeview menu-open" id="has-test">--}}
-{{--                    <!--delet open menue-->--}}
-{{--                    <a href="#"--}}
-{{--                       class="nav-link {{ (isUrlActive('restaurants/new') or--}}
-{{--                            isUrlActive('restaurants/free') or--}}
-{{--                            isUrlActive('restaurants/active') or--}}
-{{--                            isUrlActive('restaurants/finished'))--}}
-{{--                                ? 'active'--}}
-{{--                                : '' }}">--}}
-{{--                        <i class="nav-icon fas fa-users"></i>--}}
-{{--                        <p>--}}
-{{--                            @lang('messages.restaurants')--}}
-{{--                            <i class="right fas fa-angle-left"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview test-open">--}}
+                <li class="nav-item has-treeview menu-open" id="has-test">
+                    <!--delet open menue-->
+                    <a href="#"
+                       class="nav-link {{ (isUrlActive('restaurants/new') or
+                            isUrlActive('restaurants/free') or
+                            isUrlActive('restaurants/active') or
+                            isUrlActive('restaurants/finished'))
+                                ? 'active'
+                                : '' }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            @lang('messages.restaurants')
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview test-open">
 
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ url('/admin/restaurants/new') }}"--}}
-{{--                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/new') !== false ? 'active' : '' }}">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <span class="badge badge-info right">--}}
-{{--                                    {{\App\Models\EasyAdsSubscription::where('status', 'new')->count() }}--}}
-{{--                                </span>--}}
-{{--                                <p>--}}
-{{--                                    @lang('messages.not_paid')--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ url('/admin/restaurants/active') }}"--}}
-{{--                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/active') !== false ? 'active' : '' }}">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <span class="badge badge-info right">--}}
-{{--                                    {{\App\Models\EasyAdsSubscription::where('status', 'active')->count() }}--}}
-{{--                                </span>--}}
-{{--                                <p>--}}
-{{--                                    @lang('messages.active_restaurants')--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ url('/admin/restaurants/free') }}"--}}
-{{--                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/free') !== false ? 'active' : '' }}">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <span class="badge badge-info right">--}}
-{{--                                    {{\App\Models\EasyAdsSubscription::where('status', 'free')->count() }}--}}
-{{--                                </span>--}}
-{{--                                <p>--}}
-{{--                                    @lang('messages.free_restaurants')--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ url('/admin/restaurants/finished') }}"--}}
-{{--                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/finished') !== false ? 'active' : '' }}">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <span class="badge badge-info right">--}}
-{{--                                    {{\App\Models\EasyAdsSubscription::where('status', 'finished')->count() }}--}}
-{{--                                </span>--}}
-{{--                                <p>--}}
-{{--                                    @lang('messages.finished_restaurants')--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ url('/admin/restaurants/commission_hold') }}"--}}
-{{--                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/commission_hold') !== false ? 'active' : '' }}">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <span class="badge badge-info right">--}}
-{{--                                    {{\App\Models\EasyAdsSubscription::where('status', 'commission_hold')->count() }}--}}
-{{--                                </span>--}}
-{{--                                <p>--}}
-{{--                                    @lang('messages.commissions_limit')--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/restaurants/new') }}"
+                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/new') !== false ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <span class="badge badge-info right">
+                                    {{\App\Models\EasyAdsSubscription::where('status', 'new')->count() }}
+                                </span>
+                                <p>
+                                    @lang('messages.not_paid')
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/restaurants/active') }}"
+                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/active') !== false ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <span class="badge badge-info right">
+                                    {{\App\Models\EasyAdsSubscription::where('status', 'active')->count() }}
+                                </span>
+                                <p>
+                                    @lang('messages.active_restaurants')
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/restaurants/free') }}"
+                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/free') !== false ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <span class="badge badge-info right">
+                                    {{\App\Models\EasyAdsSubscription::where('status', 'free')->count() }}
+                                </span>
+                                <p>
+                                    @lang('messages.free_restaurants')
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/restaurants/finished') }}"
+                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/finished') !== false ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <span class="badge badge-info right">
+                                    {{\App\Models\EasyAdsSubscription::where('status', 'finished')->count() }}
+                                </span>
+                                <p>
+                                    @lang('messages.finished_restaurants')
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/restaurants/commission_hold') }}"
+                               class="nav-link {{ strpos(URL::current(), '/admin/restaurants/commission_hold') !== false ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <span class="badge badge-info right">
+                                    {{\App\Models\EasyAdsSubscription::where('status', 'commission_hold')->count() }}
+                                </span>
+                                <p>
+                                    @lang('messages.commissions_limit')
+                                </p>
+                            </a>
+                        </li>
 
-{{--                    </ul>--}}
-{{--                </li>--}}
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('seller_codes.index') }}"
